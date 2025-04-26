@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="script.js"></script> -->
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        .introduction{
+    background-color: #157232;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.chalon{
+    border-radius: 350px;
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.explanation{
+    margin-left: 100px;
+}
+    .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#Download{
+    background-color: transparent;
+    color: white;
+    border-radius: 100px;
+    width: 150px;
+    height: 50px;
+    border-style: solid;
+    border-color: white;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Navigation Bar - Assuming this CSS is already applied (from your provided style) */
+nav {
+
+    color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color:#157232;
+    
+}
+#mine{
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.alone{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details{
+    margin-left: 50px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 700px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.mission{
+    width: 180px;
+    height: 100px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    border-style: solid;
+    background-color: #157232;
+    border: transparent;
+    color: white;
+}
+.me{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #157232;
+    margin-top: 130px;
+}
+.graduate{
+    width: 50px;
+    height: 50px;
+}
+.header{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+.education{
+    width: 600px;
+}
+.experience{
+    width: 600px;
+}
+#all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.myName {
+    display: flex;
+    gap: 8px;
+}
+
+.myName span {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add delays for each word */
+.myName span:nth-child(1) { animation-delay: 0s; }
+.myName span:nth-child(2) { animation-delay: 0.2s; }
+.myName span:nth-child(3) { animation-delay: 0.4s; }
+.myName span:nth-child(4) { animation-delay: 0.6s; }
+.myName span:nth-child(5) { animation-delay: 0.8s; }
+.myName span:nth-child(6) { animation-delay: 0.10s; }
+.myName span:nth-child(7) { animation-delay: 0.12s; }
+.myName span:nth-child(8) { animation-delay: 0.14s; }
+.myName span:nth-child(9) { animation-delay: 0.16s; }
+.myName span:nth-child(10) { animation-delay: 0.18s; }
+.myName span:nth-child(11) { animation-delay: 0.20s; }
+.myName span:nth-child(12) { animation-delay: 0.22s; }
+.myName span:nth-child(13) { animation-delay: 0.24s; }
+.myName span:nth-child(14) { animation-delay: 0.26s; }
+.myName span:nth-child(15) { animation-delay: 0.28s; }
+.myName span:nth-child(16) { animation-delay: 0.30s; }
+.myName span:nth-child(17) { animation-delay: 0.32s; }
+.myName span:nth-child(18) { animation-delay: 0.34s; }
+.myName span:nth-child(19) { animation-delay: 0.36s; }
+.myName span:nth-child(20) { animation-delay: 0.38s; }
+.myName span:nth-child(21) { animation-delay: 0.40s; }
+.myName span:nth-child(22) { animation-delay: 0.42s; }
+.myName span:nth-child(23) { animation-delay: 0.44s; }
+.exper{
+    text-align: center;
+    color: #157232;
+}
+.skill-bar-container {
+  width: 500px;
+  background-color: #f0f0f0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.skill-bar {
+  height: 20px;
+   /* Blue color */
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  border-radius: 5px;
+  width: 0; /* Initial width is 0 for animation */
+  transition: width 1s ease-in-out; /* Add transition for smooth animation */
+}
+
+.skill-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+#all{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#skill-bar-1{
+    background-color: #157232;
+}
+#skill-bar-2{
+    background-color: rgb(235, 3, 3);
+}
+#skill-bar-3{
+    background-color: rgb(10, 10, 10);
+}
+#skill-bar-4{
+    background-color: darkblue;
+}
+#skill-bar-5{
+    background-color: rgb(255, 251, 0);
+}
+.classes{
+    text-align: center;
+    color: #157232;
+}
+#quality{
+    margin-top: 50px;
+}
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon img {
+  transform: scale(1.1);
+}
+
+.skill-card h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin: 0;
+}
+
+@keyframes skill-bar{
+    0% {
+        width : 0%;
+    }
+    20%{
+        width: 20%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+iframe{
+    height: 100px;
+}
+.cert{
+    width: 300px;
+}
+
+#activities{
+    padding: 1em 2em;
+}
+
+.card-certificates{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+
+.card-certificates h1{
+    color: #157232;
+}
+
+.certificate{
+    background: #FAF9F6;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.certificate .img{
+    width: 100%;
+    /* height: auto; */
+    /* background-color: red; */
+}
+
+.certificate .img img{
+    width: 100%;
+    border-radius: 10px;
+    height: 20em;
+    overflow: hidden;
+}
+.image {
+      filter: hue-rotate(320deg); /* Rotates the hue by 90 degrees, changing the image's colors */
+      transition: filter 0.3s ease;
+    }
+
+.image:hover {
+      filter: hue-rotate(180deg); /* Changes color when the image is hovered */
+    }
+.service{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+.services{
+    background: #FAF9F6;
+    padding: 1em;
+    border-radius: 1em;
+}
+.service-services h1{
+    color: #157232;
+}
+.change{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+.inputs{
+    display: grid;
+    margin-left: 250px;
+ 
+}
+.names{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    height: 35px;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+.input1 {
+    width: 20rem;
+    height: 40px;
+    border-radius: 20px;
+}
+.fororo{
+    width: 30%;
+    margin-left: 50px;
+}
+.input2{
+    margin-top: 50px;
+    width: 660px;
+}
+textarea {
+    border-radius: 20px;
+    margin-top: 50px;
+}
+footer {
+    background: #157232;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+#linkB{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+#all{
+    margin-left: 50px;
+}
+</style>
+</head>
+<body>
+<section id="home" class="hero">
+    <div class="introduction">
+        <img class="chalon" src="pictures/chalon.png" alt="chalon">
+        <div class="explanation">
+            <h2 class="myName">
+                <!-- <i class="fas fa-circle" style="color:red"></i> -->
+                 <img src="icons8-fibonacci-circles-50.png" alt="double circles">  
+                <span>M</span><span>E</span><span>E</span><span>T</span> <span> </span>
+                <span>N</span><span>I</span><span>Y</span><span>O</span><span>G</span><span>I</span><span>S</span><span>U</span><span>B</span><span>I</span><span>Z</span><span>O</span>
+                <span>U</span><span>W</span><span>A</span><span>S</span><span>E</span>
+                <span>C</span><span>h</span><span>a</span><span>l</span><span>o</span><span>n</span>
+            </h2>
+      <p>
+        As a passionate young coder, I aim to shape the world through technology. A Grade 11 student, 
+        I embrace new challenges and continually seek to grow. Through projects like the ASYV Intranet,
+        I’m committed to creating meaningful solutions that inspire change and benefit the community.
+      </p>
+      <button id="Download"><a id="linkB" href="pictures/resume-images-0.jpg" download="pictures/resume-images-0.jpg" class="download-btn">Download CV</a></button>
+        </div>
+       
+        
+    </div>
+    <nav>
+        <div class="container">
+            
+            <ul>
+                <h1>E-PORTIFOLIO</h1>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#quality">Quality</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#activities">Certificates</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#review">Review</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+</section>
+<!-- ABOUT SECTION -->  
+<section id="about">
+    <h1 class="me">ABOUT ME</h1>
+    <div class="alone">
+       
+        <img id="mine" src="pictures/chalon.png" alt="chalon">
+        <div class="details">
+            <p class="intro-text">
+                Hello! I’m <span class="highlight">NIYOGISUBIZO UWASE Chalon</span>, a passionate and driven Grade 11 student with a deep love for technology and innovation. 
+                From a young age, I’ve been fascinated by how technology can solve real-world problems and improve lives. 
+                Whether it’s coding, electronics, or STEM projects, I’m always eager to learn, grow, and contribute to meaningful solutions.
+              </p>
+            <div class="dropdown">
+            <button class="mission">Mission & Vision</button>
+            <div class="dropdown-content">
+                <p>My mission is to use technology and innovation to solve real-world problems. I am dedicated to applying my skills in coding, 
+                    electronics, and problem-solving to create solutions that improve lives, empower others, and contribute positively to my 
+                    community and the world beyond. I believe that technology has the power to bridge gaps, inspire change, and create a 
+                    better future for everyone.</p>
+                <p>My vision is to leverage innovation and technology as powerful tools to drive positive change. By applying my skills in 
+                    coding and electronics, I aim to create impactful solutions that address real-world challenges and benefit communities. 
+                    As I continue to grow in both education and technology, my ultimate goal is to contribute to projects that make a meaningful 
+                    and lasting difference in the lives of others.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>  
+<!-- EDUCATION AND EXPERIENCE SECTION -->  
+ <section id="quality">
+    <h1 class="exper">EDUCATION & EXPERIENCE</h1>
+    <div id="all">
+    <div>
+        <div class="header">
+            <h2>MY EDUCATION</h2>
+            <img class="graduate" src="pictures/graduate.jpg" alt="graduate">
+        </div>
+        <h4>Grade 11 Student | Mathematics, Computer Science & Physics</h2>
+        <p class="education">As a dedicated student with a passion for problem-solving and innovation, I immerse myself in the fascinating world of Mathematics, Computer Science, and Physics. These subjects fuel my curiosity and empower me to explore technology’s role in shaping the future.</p>
+    </div>
+    <div class="experience">
+        <h4>MY EXPERIENCE</h4>
+        
+        <div class="expo" style="display: flex; align-items: center; justify-content: space-around;">
+            <!-- <div>
+                <hr style="height: 500px; margin-right: 50px; width: 5px; background-color: #157232;"><img src="circle.png" alt="circle" width="25px" height="20px" top="'-200px" left="'-10px"></hr>
+                
+            </div> -->
+            <img src="pictures/joiner.png" alt="">
+            <div>
+                <p>I played basketball for two years, where I developed teamwork, discipline, and leadership skills. It taught me the importance of collaboration and perseverance.</p>
+                <p>I have a passion for electronics and enjoy working on projects that involve circuits, sensors, and innovative solutions to real-world problems.</p>
+                <p>I enjoy creating visually appealing designs through the skills I gained from CMU CS ACADEMICS. Graphic design allows me to express my creativity and attention to detail.</p>
+                <p> Playing chess has sharpened my strategic thinking, problem-solving, and decision-making skills. It’s a game I truly enjoy and continuously learn from.</p>
+                <p> As the secretary of He for She, I contribute to promoting gender equality and empowering women through organizing events, managing communications, and supporting initiatives.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ </section>
+<!-- SKILLS SECTION -->  
+<section id="skills">
+    <div>
+        <h1 class="exper" style="margin-top: 50px;">MY SKILLS</h1>
+        <div>
+            <div id="all">
+                <div class="first">
+                  <div class="skill-label">HTML</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-1" class="skill-bar" data-width="80">0%</div>
+                  </div>
+                
+                  <div class="skill-label">Python</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-2" class="skill-bar" data-width="70">0%</div>
+                  </div>
+                
+                  <div class="skill-label">JavaScript</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-3" class="skill-bar" data-width="40">0%</div>
+                  </div>
+                </div>
+                <div class="second">
+                  <div class="skill-label">PHP</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-4" class="skill-bar" data-width="50">0%</div>
+                  </div>
+                  <div class="skill-label">CSS</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-1" class="skill-bar" data-width="80">80%</div>
+                  </div>
+                
+                  <div class="skill-label">C++</div>
+                  <div class="skill-bar-container">
+                    <div id="skill-bar-5" class="skill-bar" data-width="60">0%</div>
+                  </div>
+                </div>
+                </div>
+                <!-- SKILLS SECTION -->  
+                <section id="activities">
+                    <h1 class="exper">CERTIFICATES</h1>
+                    <div class="card-certificates">
+                        <div class="certificate">
+                            <h1>FreeCode Camp</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="pictures/freeCode_page-0001.jpg">
+                            </div>
+                        </div>
+                        <div class="certificate">
+                            <h1>CMU CS Graphics</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="Chalon_page-0001.jpg">
+                            </div>
+                        </div>
+                        <div class="certificate">
+                            <h1>SoloLearn</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="sololearn_page-0001.jpg">
+                            </div>
+                        </div>
+                        <div class="certificate">
+                            <h1>IAAC</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="pictures/ASTRONOMY-copy-0_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="certificate">
+                            <h1>Wavumbuzi</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="pictures/wavumbuzi_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="certificate">
+                            <h1>IAAC</h1>
+                            <hr>
+                            <div class="img">
+                                <img src="pictures/ASTRONOMY-copy-0_page-0001.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="dropdown down2">
+                        <div class="skill-card" id="card1">
+                            <div class="skill-icon">
+                                <i class="fa-brands fa-android"></i>
+                                <img src="pictures/html.png" alt="HTML Icon">
+                            </div>
+                            <h4>FreeCode Camp</h4>
+                            <div class="certificate">
+                                <iframe class="cert" src="pictures/freeCode.pdf"></iframe>
+                            </div>
+                        </div>
+                        <div class="skill-card" id="card2">
+                        <div class="skill-icon">
+                            <img src="pictures/python.png" alt="Python Icon">
+                        </div>
+                        <h4>Wavumbuzi</h4>
+                        <div class="cmu certificate">
+                            <iframe class="cert" src="pictures/wavumbuzi.pdf" width="80%" height="500px"></iframe>
+                        </div>
+                        </div>
+                        <div class="skill-card" id="card3">
+                        <div class="skill-icon">
+                            <img src="pictures/javascript.png" alt="JavaScript Icon">
+                        </div>
+                        <h4>SoloLearn</h4>
+                        <div class="solo certificate">
+                            <iframe class="cert" src="pictures/sololearn.pdf" width="80%" height="500px"></iframe>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="dropdown down2">
+                        <div class="skill-card" id="card4">
+                            <div class="skill-icon">
+                                <img src="pictures/java.png" alt="Java Icon">
+                            </div>
+                            <h4>IAAC</h4>
+                            <div class="iaac certificate">
+                                <iframe class="cert" src="pictures/ASTRONOMY.pdf" width="80%" height="500px"></iframe>
+                            </div>
+                        </div>
+                        <div class="skill-card" id="card5">
+                            <div class="skill-icon">
+                                <img src="pictures/cpp.png" alt="C++ Icon">
+                            </div>
+                            <h4>CMU CS GRAPHICS</h4>
+                            <div class="python1 certificate">
+                                <iframe class="cert" src="Chalon.pdf" width="80%" height="500px"></iframe>
+                            </div>
+                        </div>
+                        <div class="skill-card" id="card6">
+                            <div class="skill-icon">
+                                <img src="pictures/web-design.png" alt="Web Design Icon">
+                            </div>
+                            <h4>Web Design</h4>
+                            <div class="python2 certificate">
+                                <iframe class="cert" id="web" src="Chalon.pdf" width="80%" height="500px"></iframe>
+                            </div>
+                        </div>
+                    </div> -->
+                </section> 
+            </div>
+        </div>
+    </section>
+ <!-- SECTION OF SERVICES -->
+ <section>
+    <h1 class="me">SERVICES</h1>
+    <div class="service">
+        <div class="services">
+            <div class="change">
+                <img class="image" src="website.png" alt="webDisigning">
+                <h4>Web Design</h2>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam non consequatur? Earum quo cum delectus possimus perferendis fuga perspiciatis alias, numquam similique animi unde, magni obcaecati aliquam facere corporis.</p>
+        </div>
+        <div class="services">
+            <div class="change">
+                <img class="image" src="games.png" alt="gamesDevelopment">
+                <h4>Online Games Devlopment</h2>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore itaque quis dolor quo saepe omnis esse est error? Molestias, similique non! Ullam aut aliquam hic voluptatum deserunt explicabo accusantium dolorum?</p>
+        </div>
+        <div class="services">
+            <div class="change">
+                <img class="image" src="writing.png" alt="webDevelopment">
+                <h4>Web Development</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ipsa est tempora, asperiores explicabo enim, ratione iste dolor doloribus pariatur natus aliquam saepe cumque hic aperiam. Id, voluptatem. Distinctio, voluptate!</p>
+        </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+<section>
+    <form action="" class="fororo">
+        <h1 class="me" style="margin-left: 500px; width: 300px;">Contact Me</h1>
+        <div class="inputs">
+            <div class="names">
+                <input class="input1" type="name" placeholder="Your Name">
+                <input class="input1" type="email" placeholder="Your Email">
+            </div>
+            <input class="input2"  type="text" placeholder="Subject" style="height: 40px; border-radius: 20px;">
+            <textarea name="" id="input3" cols="5" rows="10" placeholder="Message"></textarea>
+        </div>
+    </form>
+</section>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 NIYOGISUBIZO UWASE Chalon. All rights reserved.</p>
+    </div>
+</footer>
+    <script>
+        const skillBars = document.querySelectorAll('.skill-bar');
+    
+        skillBars.forEach(skillBar => {
+          const width = skillBar.dataset.width;
+          skillBar.style.width = `${width}%`;
+          skillBar.textContent = `${width}%`; // Update text to show percentage
+        });
+
+        let card1 = document.getElementById("card1")
+
+        card1.addEventListener("mouseover", event =>{
+            document.querySelector(".certificate").style.display = "block";
+        })
+
+        card1.addEventListener("mouseout", event =>{
+            document.querySelector(".certificate").style.display = "none";
+        })
+        let card2 = document.getElementById("card2")
+
+        card2.addEventListener("mouseover", event =>{
+            document.querySelector(".cmu").style.display = "block";
+        })
+
+        card2.addEventListener("mouseout", event =>{
+            document.querySelector(".cmu").style.display = "none";
+        })
+        let card3 = document.getElementById("card3")
+
+        card3.addEventListener("mouseover", event =>{
+            document.querySelector(".solo").style.display = "block";
+        })
+
+        card3.addEventListener("mouseout", event =>{
+            document.querySelector(".solo").style.display = "none";
+        })
+        let card4 = document.getElementById("card4")
+
+        card4.addEventListener("mouseover", event =>{
+            document.querySelector(".iaac").style.display = "block";
+        })
+
+        card4.addEventListener("mouseout", event =>{
+            document.querySelector(".iaac").style.display = "none";
+        })
+        let card5 = document.getElementById("card5")
+
+        card5.addEventListener("mouseover", event =>{
+            document.querySelector(".python1").style.display = "block";
+        })
+
+        card5.addEventListener("mouseout", event =>{
+            document.querySelector(".python1").style.display = "none";
+        })
+        let card6 = document.getElementById("card6")
+
+        card6.addEventListener("mouseover", event =>{
+            document.querySelector(".python2").style.display = "block";
+        })
+
+        card6.addEventListener("mouseout", event =>{
+            document.querySelector(".python2").style.display = "none";
+        })
+
+      </script>
+</body>
+</html>

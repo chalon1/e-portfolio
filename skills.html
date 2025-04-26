@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - NIYOGISUBIZO UWASE Chalon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="skills.css">
+</head>
+<body>
+  <!-- Navigation Bar (Same as the previous pages) -->
+  <nav>
+    <div class="container">
+      <h1>NIYOGISUBIZO UWASE Chalon</h1>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills & Certifications</a></li>
+        <li><a href="activities.html">Extracurricular Activities</a></li>
+        <li><a href="accomplishments.html">Accomplishments</a></li>
+        <li><input type="text" placeholder="Search"></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <!-- Heading -->
+      <h2>Skills & Certifications</h2>
+      <p class="intro-text">
+        I have developed a diverse set of skills through my academic, extracurricular, and personal experiences. Here’s a summary of my technical and soft skills:
+      </p>
+
+      <!-- Technical Skills -->
+      <div class="skills-category">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/html.png" alt="HTML Icon">
+            </div>
+            <h4>HTML</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/python.png" alt="Python Icon">
+            </div>
+            <h4>Python</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/javascript.png" alt="JavaScript Icon">
+            </div>
+            <h4>JavaScript</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/java.png" alt="Java Icon">
+            </div>
+            <h4>Java</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/cpp.png" alt="C++ Icon">
+            </div>
+            <h4>C++</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/web-design.png" alt="Web Design Icon">
+            </div>
+            <h4>Web Design</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skills-category">
+        <h3>Soft Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/communication.png" alt="Communication Icon">
+            </div>
+            <h4>Communication</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/leadership.png" alt="Leadership Icon">
+            </div>
+            <h4>Leadership</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/teamwork.png" alt="Teamwork Icon">
+            </div>
+            <h4>Teamwork</h4>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="pictures/problem-solving.png" alt="Problem Solving Icon">
+            </div>
+            <h4>Problem Solving</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <div class="skills-category">
+        <h3>Certifications</h3>
+        <p class="intro-text">
+          Here are some of the certifications I’ve earned through my hard work and dedication:
+        </p>
+
+        <!-- Certificate Gallery -->
+        <div class="certificate-gallery">
+          <div class="gallery-container">
+            <!-- Wavumbuzi Certificate -->
+            <div class="gallery-slide">
+              <h4>Wavumbuzi Entrepreneurship Challenge 2024</h4>
+              <iframe src="pictures/wavumbuzi.pdf" width="80%" height="500px"></iframe>
+            </div>
+
+            <!-- freeCodeCamp Certificate -->
+            <div class="gallery-slide">
+              <h4>freeCodeCamp Responsive Web Design Certification</h4>
+              <iframe src="pictures/freeCode.pdf" width="80%" height="500px"></iframe>
+            </div>
+
+            <!-- SoloLearn Certificate -->
+            <div class="gallery-slide">
+              <h4>SoloLearn Introduction to HTML Certification</h4>
+              <iframe src="pictures/freeCode.pdf" width="80%" height="500px"></iframe>
+            </div>
+
+            <div class="gallery-slide">
+                <h4>International Astronomy and Astrophysics Competition</h4>
+                <iframe src="pictures/ASTRONOMY.pdf" width="80%" height="500px"></iframe>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NIYOGISUBIZO UWASE Chalon. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Certificate Gallery -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.gallery-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Automatically change slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

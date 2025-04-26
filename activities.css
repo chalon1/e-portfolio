@@ -1,0 +1,180 @@
+/* Import Poppins font (if not already in your main CSS) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* General Styles - Consistent with your Skills page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    color: #333;
+    background-color: rgb(177, 175, 175);
+    padding-top: 70px; /* To account for the fixed navigation bar */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation Bar - Assuming this CSS is already applied (from your provided style) */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+nav ul li input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Extracurricular Activities Section Styling */
+.activities {
+    padding: 60px 0;
+}
+
+.activities h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+}
+
+.activities h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.activities .intro-text {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Activity Cards - Similar to Skill Cards */
+.activity-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex; /* Arrange icon and text horizontally */
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.activity-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f2f7; /* Light background for icons */
+    /* Removed background image styles from here */
+}
+
+.activity-card h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin: 0;
+    margin-bottom: 10px; /* Add some space below the title */
+}
+
+.activity-card p {
+    color: #555;
+}
+
+/* Footer - Assuming this CSS is already applied */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.activities h2, .activity-card {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive adjustments for activity cards */
+@media (max-width: 768px) {
+    .activity-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .activity-icon {
+        margin: 0 auto 15px;
+    }
+}
