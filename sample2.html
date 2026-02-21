@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIYOGISUBIZO UWASE Chalon | E-Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chalon{
+    border-radius: 350px;
+    width: 450px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+body{
+    background:#0f172a;
+    color:#f1f5f9;
+    scroll-behavior:smooth;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    background:#0f172a;
+    padding:15px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #1e293b;
+    z-index:1000;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav a{
+    color:#f1f5f9;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:50px;
+    font-weight:800;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:600px;
+    line-height:1.6;
+}
+
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:600;
+    border-radius:30px;
+    text-decoration:none;
+    align-items: center;
+    border-color: transparent;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+.section-title{
+    font-size:35px;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#1e293b;
+    margin-top:50px;
+}
+#view{
+    padding-left: 500px;
+}
+#mine{
+    width: 50px;
+    height: 40px;
+    border-radius: 40px;
+   
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="all">
+        <img id="mine" src="Ikkk.jpg" alt="chalon">
+        <h2>Chalon</h2>
+    </div>
+    
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="intro">
+    <h1>Hi, I'm <span>NIYOGISUBIZO UWASE Chalon</span></h1>
+    <img class="chalon" src="Ikkk.jpg" alt="chalon">
+    </div>
+    <p>
+        A passionate Grade 12 student specializing in Mathematics, Computer Science, 
+        and Physics. I am deeply driven by innovation, problem-solving, and 
+        building technology that makes real-world impact.
+    </p>
+    <a href="#projects" class="btn" id="view">View My Work</a>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        I am a future engineer and innovator with strong analytical skills in STEM fields and deejaying.
+        My academic journey focuses on developing solutions through programming, 
+        electronics, and scientific reasoning. I consistently pursue excellence and 
+        challenge myself with projects beyond classroom requirements.
+    </p>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🔌 Network Cable Engineering Project</h3>
+            <p>
+                Designed and tested RJ45 Ethernet cables using T568B standards. 
+                Diagnosed signal transmission issues and corrected wiring inconsistencies during Project Based Learning.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📊 ASYV Intranet</h3>
+            <p>
+                Developed a website for my school aimed at creating awareness among the students.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 SQL & Database Logic Development</h3>
+            <p>
+                Implemented advanced SQL queries including string manipulation functions 
+                and logical data filtering for structured data analysis.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📐 Mathematical Function Analysis</h3>
+            <p>
+                Analyzed families of real-valued functions, solving intersection 
+                problems and computing geometric distances to the origin.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ STEM Research & Problem Solving</h3>
+            <p>
+                Applied analytical reasoning in Mathematics and Physics to 
+                solve non-trivial academic challenges beyond classroom exercises.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Personal E-Portfolio Development</h3>
+            <p>
+                Designed and developed a fully responsive personal academic portfolio 
+                using HTML and CSS to professionally present skills and achievements.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="certificates">
+    <h2 class="section-title">Certificates & Achievements</h2>
+    <div class="cards">
+
+        <div class="card">
+            <h3>🏅 STEM Excellence Recognition</h3>
+            <p>Outstanding performance in Mathematics, Physics, and Computer Science.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 International Youth Math Competition Award</h3>
+            <p>Participated in international youth Math competition and became the first at national level.</p>
+        </div>
+
+        <div class="card">
+            <h3>💡 International Youth Physics Competition Recognition</h3>
+            <p>Took apart into international youth Physics competition.</p>
+        </div>
+        <div class="card">
+            <h3>💻 Carnegie Mellon Graphics Design Certificate</h3>
+            <p>Learnt graphics design with Carnegie Mellon and recieved completion certificate.</p>
+        </div>
+        <div class="card">
+            <h3>🌐 FreeCode Camp Certificate</h3>
+            <p>Earned certificate for Responsive web design</p>
+        </div>
+        <div class="card">
+            <h3>♟️ Chess Competition Award</h3>
+            <p>Participated and won chess competition at school level.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Information</h2>
+
+    <div style="max-width:800px; margin:auto; text-align:center; background:#1e293b; padding:40px; border-radius:15px;">
+
+        <p style="font-size:18px; margin-bottom:20px;">
+            I am currently seeking academic opportunities, research exposure, 
+            and university programs that encourage innovation, scientific thinking, 
+            and technological advancement.
+        </p>
+
+        <!-- Contact Form -->
+        <form id="contactForm" action="https://formspree.io/f/xdaldgnq" method="POST" style="margin-top:30px; text-align:center;">
+            
+            <input type="text" name="name" placeholder="Your Full Name" required
+                   style="width:80%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
+            
+            <input type="email" name="email" placeholder="Your Email" required
+                   style="width:80%; padding:12px; margin:10px 0; border-radius:10px; border:none;">
+            
+            <textarea name="message" placeholder="Your Message" required
+                      style="width:80%; padding:12px; margin:10px 0; border-radius:10px; border:none; height:120px;"></textarea>
+            
+            <button type="submit" class="btn">Send Professional Inquiry</button>
+
+        </form>
+
+        <!-- Confirmation Message (hidden by default) -->
+        <p id="confirmationMessage" style="color:#38bdf8; font-weight:600; margin-top:20px; display:none;">
+            ✅ Thank you! Your message has been received.
+        </p>
+
+        <div style="margin-top:30px; line-height:2; font-size:16px; color:#f1f5f9;">
+            <p><strong>Location:</strong> Rwanda</p>
+            <p><strong>Field of Interest:</strong> Engineering, Computer Science, Applied Mathematics, Technology Innovation</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- JavaScript to show notification -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent default form submission
+
+    const form = event.target;
+    const confirmation = document.getElementById('confirmationMessage');
+
+    // Send form data to Formspree
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            confirmation.style.display = 'block'; // show message
+            form.reset(); // clear the form
+        } else {
+            alert('Oops! There was a problem sending your message.');
+        }
+    }).catch(error => {
+        alert('Oops! There was a problem sending your message.');
+        console.error(error);
+    });
+});
+</script>
+
+<footer>
+    © 2026 NIYOGISUBIZO UWASE Chalon | E-Portfolio
+</footer>
+
+</body>
+</html>
