@@ -3,745 +3,960 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script src="script.js"></script> -->
-    <title>Document</title>
+    <title>NIYOGISUBIZO UWASE Chalon | E-Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body{
+        :root {
+            --bg-dark: #0b0b0f;
+            --card-bg: #16161a;
+            --accent-orange: #ff7b54;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+            --border-color: #262626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-        .introduction{
-    background-color: #157232;
-    display: flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-.chalon{
-    border-radius: 350px;
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: 100px;
-}
-.explanation{
-    margin-left: 100px;
-}
-    .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-#Download{
-    background-color: transparent;
-    color: white;
-    border-radius: 100px;
-    width: 150px;
-    height: 50px;
-    border-style: solid;
-    border-color: white;
-}
-button:hover{
-    background-color: white;
-    color: black;
-}
 
-/* Navigation Bar - Assuming this CSS is already applied (from your provided style) */
-nav {
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
 
-    color: black;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(11, 11, 15, 0.98);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-nav h1 {
-    margin: 0;
-    font-size: 24px;
-}
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area h2 { font-size: 1.5rem; font-weight: 800; }
+        .logo-area span { color: var(--accent-orange); }
+        
+        #mine-thumb { 
+            width: 35px; height: 35px; border-radius: 50%; 
+            object-fit: cover; border: 1.5px solid var(--accent-orange); 
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        nav .links a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
 
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
+        nav .links a:hover { color: var(--accent-orange); }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    font-weight: 500;
-}
+        /* --- Hero Section --- */
+        section { padding: 100px 10%; }
 
-nav ul li a:hover {
-    color:#157232;
-    
-}
-#mine{
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: 20px;
-    border-radius: 10px;
-}
-.alone{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.details{
-    margin-left: 50px;
-}
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text { flex: 1.2; }
+        .hero-text h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+        .hero-text h1 span { color: var(--accent-orange); }
+        .hero-text p { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 35px; max-width: 90%; }
+
+        .hero-img-container {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .chalon-main {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #1a1a1e;
+            outline: 2px solid var(--accent-orange);
+            box-shadow: 0 0 50px rgba(255, 123, 84, 0.15);
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background: var(--accent-orange);
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.4s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 123, 84, 0.4);
+        }
+        /* --- Mission & Vision Dropdown --- */
 .dropdown {
-  position: relative;
-  display: inline-block;
-  
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.mission-btn {
+    background: var(--card-bg);
+    color: var(--text-white);
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 1px solid var(--accent-orange);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mission-btn:hover {
+    background: var(--accent-orange);
+    box-shadow: 0 0 20px rgba(255, 123, 84, 0.4);
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 700px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
+    display: none; /* Hidden by default */
+    background: var(--card-bg);
+    margin-top: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeIn 0.5s ease;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Show when button is clicked */
+.dropdown.active .dropdown-content {
+    display: block;
 }
-.mission{
-    width: 180px;
-    height: 100px;
+
+.dropdown-content p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.dropdown-content p:first-child::before {
+    content: "MISSION: ";
+    color: var(--accent-orange);
+    font-weight: 800;
+}
+
+.dropdown-content p:last-child::before {
+    content: "VISION: ";
+    color: var(--accent-orange);
+    font-weight: 800;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+        /* --- Skills Section --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .skill-box {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .skill-box h4 { margin-bottom: 15px; font-size: 0.9rem; }
+        
+        .progress-bar {
+            background: #262626;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: var(--accent-orange);
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* --- Cards --- */
+        .section-title { font-size: 2.8rem; text-align: center; margin-bottom: 60px; font-weight: 800; }
+        .section-title span { color: var(--accent-orange); }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-10px);
+            background: #1c1c21;
+        }
+
+        .card h3 { color: var(--accent-orange); margin-bottom: 15px; font-size: 1.3rem; }
+        .card p { color: var(--text-gray); font-size: 0.95rem; }
+        /* --- Services Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--card-bg);
     border-radius: 20px;
-    margin-left: 50px;
-    margin-top: 50px;
-    background-color: transparent;
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    border-style: solid;
-    background-color: #157232;
-    border: transparent;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    background: #222; /* Placeholder for your project images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-orange);
+    font-size: 3rem;
+}
+
+.service-info { padding: 25px; position: relative; }
+
+.service-info .arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: var(--accent-orange);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
 }
-.me{
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+
+/* --- Testimonials Section --- */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.testimonial-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border-bottom: 3px solid var(--accent-orange);
+}
+
+.stars { color: #ffb400; font-size: 0.8rem; margin-bottom: 15px; }
+.client-meta { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.client-img { width: 50px; height: 50px; border-radius: 50%; background: #333; }
+.client-info h4 { font-size: 1rem; line-height: 1.2; }
+.client-info span { font-size: 0.8rem; color: var(--text-gray); }
+       /* ---- Certificates ---*/
+/* --- Certificate Section Styling --- */
+.card-certificates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certificate {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    transition: 0.4s ease;
     text-align: center;
-    color: #157232;
-    margin-top: 130px;
+    cursor: pointer; /* Shows it's clickable */
 }
-.graduate{
-    width: 50px;
-    height: 50px;
+
+.certificate:hover {
+    border-color: var(--accent-orange);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 123, 84, 0.1);
 }
-.header{
-    display: flex;
-    /* justify-content: space-between; */
+
+.certificate h1 {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.certificate hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-orange), transparent);
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.certificate .img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+}
+
+.certificate .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.5s;
+}
+
+/* --- Lightbox / Click-to-Expand --- */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    justify-content: center;
     align-items: center;
-
-}
-.education{
-    width: 600px;
-}
-.experience{
-    width: 600px;
-}
-#all{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.myName {
-    display: flex;
-    gap: 8px;
+    cursor: zoom-out;
 }
 
-.myName span {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeInUp 0.5s ease forwards;
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border: 2px solid var(--accent-orange);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(255, 123, 84, 0.2);
+    animation: zoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-/* Add delays for each word */
-.myName span:nth-child(1) { animation-delay: 0s; }
-.myName span:nth-child(2) { animation-delay: 0.2s; }
-.myName span:nth-child(3) { animation-delay: 0.4s; }
-.myName span:nth-child(4) { animation-delay: 0.6s; }
-.myName span:nth-child(5) { animation-delay: 0.8s; }
-.myName span:nth-child(6) { animation-delay: 0.10s; }
-.myName span:nth-child(7) { animation-delay: 0.12s; }
-.myName span:nth-child(8) { animation-delay: 0.14s; }
-.myName span:nth-child(9) { animation-delay: 0.16s; }
-.myName span:nth-child(10) { animation-delay: 0.18s; }
-.myName span:nth-child(11) { animation-delay: 0.20s; }
-.myName span:nth-child(12) { animation-delay: 0.22s; }
-.myName span:nth-child(13) { animation-delay: 0.24s; }
-.myName span:nth-child(14) { animation-delay: 0.26s; }
-.myName span:nth-child(15) { animation-delay: 0.28s; }
-.myName span:nth-child(16) { animation-delay: 0.30s; }
-.myName span:nth-child(17) { animation-delay: 0.32s; }
-.myName span:nth-child(18) { animation-delay: 0.34s; }
-.myName span:nth-child(19) { animation-delay: 0.36s; }
-.myName span:nth-child(20) { animation-delay: 0.38s; }
-.myName span:nth-child(21) { animation-delay: 0.40s; }
-.myName span:nth-child(22) { animation-delay: 0.42s; }
-.myName span:nth-child(23) { animation-delay: 0.44s; }
-.exper{
-    text-align: center;
-    color: #157232;
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: var(--text-white);
+    font-size: 50px;
+    cursor: pointer;
 }
-.skill-bar-container {
-  width: 500px;
-  background-color: #f0f0f0;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  overflow: hidden;
-  border-radius: 20px;
-}
+        /* --- Contact --- */
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+        }
 
-.skill-bar {
-  height: 20px;
-   /* Blue color */
-  color: white;
-  text-align: right;
-  padding-right: 10px;
-  line-height: 20px;
-  border-radius: 5px;
-  width: 0; /* Initial width is 0 for animation */
-  transition: width 1s ease-in-out; /* Add transition for smooth animation */
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: #0b0b0f;
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .form-group input:focus { border-color: var(--accent-orange); }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 992px) {
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 150px; }
+            .hero-text h1 { font-size: 2.8rem; }
+            .chalon-main { width: 280px; height: 280px; }
+            nav .links { display: none; } /* Simplified for mobile */
+        }
+             /* ---- Skills ---*/
+    /* --- Skill Bars Styling --- */
+#all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
 }
 
 .skill-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
-}
-#all{
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-white);
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-#skill-bar-1{
-    background-color: #157232;
-}
-#skill-bar-2{
-    background-color: rgb(235, 3, 3);
-}
-#skill-bar-3{
-    background-color: rgb(10, 10, 10);
-}
-#skill-bar-4{
-    background-color: darkblue;
-}
-#skill-bar-5{
-    background-color: rgb(255, 251, 0);
-}
-.classes{
-    text-align: center;
-    color: #157232;
-}
-#quality{
-    margin-top: 50px;
-}
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    padding: 1em 0;
-    gap: 1em;
-}
 
-.skill-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.skill-icon img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.skill-card:hover .skill-icon img {
-  transform: scale(1.1);
-}
-
-.skill-card h4 {
-  font-size: 20px;
-  color: #2c3e50;
-  margin: 0;
-}
-
-@keyframes skill-bar{
-    0% {
-        width : 0%;
-    }
-    20%{
-        width: 20%;
-    }
-    100%{
-        width: 100%;
-    }
-}
-iframe{
-    height: 100px;
-}
-.cert{
-    width: 300px;
-}
-
-#activities{
-    padding: 1em 2em;
-}
-
-.card-certificates{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1em;
-}
-
-.card-certificates h1{
-    color: #157232;
-}
-
-.certificate{
-    background: #FAF9F6;
-    padding: 1em;
-    border-radius: 1em;
-}
-
-.certificate .img{
-    width: 100%;
-    /* height: auto; */
-    /* background-color: red; */
-}
-
-.certificate .img img{
-    width: 100%;
+.skill-bar-container {
+    background: #1e1e24;
+    height: 12px;
     border-radius: 10px;
-    height: 20em;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar {
+    background: var(--accent-orange);
+    height: 100%;
+    width: 0%; /* Start at 0 for animation */
+    border-radius: 10px;
+    text-indent: -9999px; /* Hides the text inside the bar until we need it */
+    transition: width 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
+    box-shadow: 0 0 10px rgba(255, 123, 84, 0.3);
+}
+/* --- High-End Tech Stack --- */
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.tech-card {
+    background: rgba(22, 22, 26, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    padding: 25px 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
     overflow: hidden;
 }
-.image {
-      filter: hue-rotate(320deg); /* Rotates the hue by 90 degrees, changing the image's colors */
-      transition: filter 0.3s ease;
-    }
 
-.image:hover {
-      filter: hue-rotate(180deg); /* Changes color when the image is hovered */
-    }
-.service{
+/* Hover Effect: Glow and Lift */
+.tech-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-orange);
+    background: rgba(255, 123, 84, 0.05);
+    box-shadow: 0 10px 30px rgba(255, 123, 84, 0.15);
+}
+
+.tech-card img {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+    transition: 0.3s;
+}
+
+.tech-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.tech-card span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-gray);
+    transition: 0.3s;
+}
+
+.tech-card:hover span {
+    color: var(--accent-orange);
+}
+
+/* Subtle floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.tech-card:nth-child(odd) { animation: float 4s ease-in-out infinite; }
+.tech-card:nth-child(even) { animation: float 4s ease-in-out infinite 1s; }ent-orange);
+
+@media (max-width: 768px) {
+    #all { grid-template-columns: 1fr; }
+}
+/* --- Social Connect Section --- */
+.social-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
-.services{
-    background: #FAF9F6;
-    padding: 1em;
-    border-radius: 1em;
-}
-.service-services h1{
-    color: #157232;
-}
-.change{
-    display: flex;
-    justify-content: center;
-    align-items: left;
-}
-.inputs{
-    display: grid;
-    margin-left: 250px;
- 
-}
-.names{
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    height: 35px;
-    border-radius: 25px;
-    margin-top: 50px;
-}
-.input1 {
-    width: 20rem;
-    height: 40px;
+
+.social-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
     border-radius: 20px;
-}
-.fororo{
-    width: 30%;
-    margin-left: 50px;
-}
-.input2{
-    margin-top: 50px;
-    width: 660px;
-}
-textarea {
-    border-radius: 20px;
-    margin-top: 50px;
-}
-footer {
-    background: #157232;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 60px;
-}
-#linkB{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-#all{
-    margin-left: 50px;
+    transition: all 0.4s ease;
 }
 
-</style>
+.social-card:hover {
+    border-color: var(--accent-orange);
+    transform: translateY(-10px);
+    background: rgba(255, 123, 84, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.social-card:hover .social-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px var(--accent-orange));
+}
+
+.social-card h3 {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.social-card span {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+}
+
+.social-card:hover h3 {
+    color: var(--accent-orange);
+}
+    </style>
 </head>
+
 <body>
-<section id="home" class="hero">
-    <div class="introduction">
-        <img class="chalon" src="Ikkk.jpg" alt="chalon">
-        <div class="explanation">
-            <h2 class="myName">
-                <!-- <i class="fas fa-circle" style="color:red"></i> -->
-                 <img src="icons8-fibonacci-circles-50.png" alt="double circles">  
-                <span>M</span><span>E</span><span>E</span><span>T</span> <span> </span>
-                <span>N</span><span>I</span><span>Y</span><span>O</span><span>G</span><span>I</span><span>S</span><span>U</span><span>B</span><span>I</span><span>Z</span><span>O</span>
-                <span>U</span><span>W</span><span>A</span><span>S</span><span>E</span>
-                <span>C</span><span>h</span><span>a</span><span>l</span><span>o</span><span>n</span>
-            </h2>
-      <p>
-        As a passionate young coder, I aim to shape the world through technology. A Grade 11 student, 
-        I embrace new challenges and continually seek to grow. Through projects like the ASYV Intranet,
-        I’m committed to creating meaningful solutions that inspire change and benefit the community.
-      </p>
-      <button id="Download"><a id="linkB" href="pictures/resume-images-0.jpg" download="pictures/resume-images-0.jpg" class="download-btn">Download CV</a></button>
-        </div>
-       
-        
+
+<nav>
+    <div class="logo-area">
+        <img id="mine-thumb" src="Ikkk.jpg" alt="Chalon">
+        <h2>Chalon<span>.</span></h2>
     </div>
-    <nav>
-        <div class="container">
-            
-            <ul>
-                <h1>E-PORTIFOLIO</h1>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#quality">Quality</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#activities">Certificates</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#review">Review</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul>
-        </div>
-    </nav>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#purpose-dropdown">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Chalon</span></h1>
+        <p>A Grade 12 student specializing in <strong>Mathematics, Computer Science, and Physics</strong>. I build technology driven by innovation and real-world impact.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <div class="hero-img-container">
+        <img class="chalon-main" src="Ikkk.jpg" alt="NIYOGISUBIZO UWASE Chalon">
+    </div>
 </section>
-<!-- ABOUT SECTION -->  
-<section id="about">
-    <h1 class="me">ABOUT ME</h1>
-    <div class="alone">
-       
-        <img id="mine" src="pictures/chalon.png" alt="chalon">
-        <div class="details">
-            <p class="intro-text">
-                Hello! I’m <span class="highlight">NIYOGISUBIZO UWASE Chalon</span>, a passionate and driven Grade 11 student with a deep love for technology and innovation. 
-                From a young age, I’ve been fascinated by how technology can solve real-world problems and improve lives. 
-                Whether it’s coding, electronics, or STEM projects, I’m always eager to learn, grow, and contribute to meaningful solutions.
-              </p>
-            <div class="dropdown">
-            <button class="mission">Mission & Vision</button>
-            <div class="dropdown-content">
-                <p>My mission is to use technology and innovation to solve real-world problems. I am dedicated to applying my skills in coding, 
-                    electronics, and problem-solving to create solutions that improve lives, empower others, and contribute positively to my 
-                    community and the world beyond. I believe that technology has the power to bridge gaps, inspire change, and create a 
-                    better future for everyone.</p>
-                <p>My vision is to leverage innovation and technology as powerful tools to drive positive change. By applying my skills in 
-                    coding and electronics, I aim to create impactful solutions that address real-world challenges and benefit communities. 
-                    As I continue to grow in both education and technology, my ultimate goal is to contribute to projects that make a meaningful 
-                    and lasting difference in the lives of others.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>  
-<!-- EDUCATION AND EXPERIENCE SECTION -->  
- <section id="quality">
-    <h1 class="exper">EDUCATION & EXPERIENCE</h1>
-    <div id="all">
-    <div>
-        <div class="header">
-            <h2>MY EDUCATION</h2>
-            <img class="graduate" src="pictures/graduate.jpg" alt="graduate">
-        </div>
-        <h4>Grade 11 Student | Mathematics, Computer Science & Physics</h2>
-        <p class="education">As a dedicated student with a passion for problem-solving and innovation, I immerse myself in the fascinating world of Mathematics, Computer Science, and Physics. These subjects fuel my curiosity and empower me to explore technology’s role in shaping the future.</p>
-    </div>
-    <div class="experience">
-        <h4>MY EXPERIENCE</h4>
-        
-        <div class="expo" style="display: flex; align-items: center; justify-content: space-around;">
-            <!-- <div>
-                <hr style="height: 500px; margin-right: 50px; width: 5px; background-color: #157232;"><img src="circle.png" alt="circle" width="25px" height="20px" top="'-200px" left="'-10px"></hr>
-                
-            </div> -->
-            <img src="pictures/joiner.png" alt="">
-            <div>
-                <p>I played basketball for two years, where I developed teamwork, discipline, and leadership skills. It taught me the importance of collaboration and perseverance.</p>
-                <p>I have a passion for electronics and enjoy working on projects that involve circuits, sensors, and innovative solutions to real-world problems.</p>
-                <p>I enjoy creating visually appealing designs through the skills I gained from CMU CS ACADEMICS. Graphic design allows me to express my creativity and attention to detail.</p>
-                <p> Playing chess has sharpened my strategic thinking, problem-solving, and decision-making skills. It’s a game I truly enjoy and continuously learn from.</p>
-                <p> As the secretary of He for She, I contribute to promoting gender equality and empowering women through organizing events, managing communications, and supporting initiatives.</p>
-            </div>
-        </div>
-    </div>
-</div>
- </section>
-<!-- SKILLS SECTION -->  
-<section id="skills">
-    <div>
-        <h1 class="exper" style="margin-top: 50px;">MY SKILLS</h1>
-        <div>
-            <div id="all">
-                <div class="first">
-                  <div class="skill-label">HTML</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-1" class="skill-bar" data-width="80">0%</div>
-                  </div>
-                
-                  <div class="skill-label">Python</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-2" class="skill-bar" data-width="70">0%</div>
-                  </div>
-                
-                  <div class="skill-label">JavaScript</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-3" class="skill-bar" data-width="40">0%</div>
-                  </div>
-                </div>
-                <div class="second">
-                  <div class="skill-label">PHP</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-4" class="skill-bar" data-width="50">0%</div>
-                  </div>
-                  <div class="skill-label">CSS</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-1" class="skill-bar" data-width="80">80%</div>
-                  </div>
-                
-                  <div class="skill-label">C++</div>
-                  <div class="skill-bar-container">
-                    <div id="skill-bar-5" class="skill-bar" data-width="60">0%</div>
-                  </div>
-                </div>
-                </div>
-                <!-- SKILLS SECTION -->  
-                <section id="activities">
-                    <h1 class="exper">CERTIFICATES</h1>
-                    <div class="card-certificates">
-                        <div class="certificate">
-                            <h1>FreeCode Camp</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="pictures/freeCode_page-0001.jpg">
-                            </div>
-                        </div>
-                        <div class="certificate">
-                            <h1>CMU CS Graphics</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="Chalon_page-0001.jpg">
-                            </div>
-                        </div>
-                        <div class="certificate">
-                            <h1>SoloLearn</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="sololearn_page-0001.jpg">
-                            </div>
-                        </div>
-                        <div class="certificate">
-                            <h1>IAAC</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="pictures/ASTRONOMY-copy-0_page-0001.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="certificate">
-                            <h1>Wavumbuzi</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="pictures/wavumbuzi_page-0001.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="certificate">
-                            <h1>IAAC</h1>
-                            <hr>
-                            <div class="img">
-                                <img src="pictures/ASTRONOMY-copy-0_page-0001.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                </section> 
-            </div>
-        </div>
-    </section>
- <!-- SECTION OF SERVICES -->
- <section>
-    <h1 class="me">SERVICES</h1>
-    <div class="service">
-        <div class="services">
-            <div class="change">
-                <img class="image" src="website.png" alt="webDisigning">
-                <h4>Web Design</h2>
-            </div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam non consequatur? Earum quo cum delectus possimus perferendis fuga perspiciatis alias, numquam similique animi unde, magni obcaecati aliquam facere corporis.</p>
-        </div>
-        <div class="services">
-            <div class="change">
-                <img class="image" src="games.png" alt="gamesDevelopment">
-                <h4>Online Games Devlopment</h2>
-            </div>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore itaque quis dolor quo saepe omnis esse est error? Molestias, similique non! Ullam aut aliquam hic voluptatum deserunt explicabo accusantium dolorum?</p>
-        </div>
-        <div class="services">
-            <div class="change">
-                <img class="image" src="writing.png" alt="webDevelopment">
-                <h4>Web Development</h2>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ipsa est tempora, asperiores explicabo enim, ratione iste dolor doloribus pariatur natus aliquam saepe cumque hic aperiam. Id, voluptatem. Distinctio, voluptate!</p>
-        </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-<section>
-    <form action="" class="fororo">
-        <h1 class="me" style="margin-left: 500px; width: 300px;">Contact Me</h1>
-        <div class="inputs">
-            <div class="names">
-                <input class="input1" type="name" placeholder="Your Name">
-                <input class="input1" type="email" placeholder="Your Email">
-            </div>
-            <input class="input2"  type="text" placeholder="Subject" style="height: 40px; border-radius: 20px;">
-            <textarea name="" id="input3" cols="5" rows="10" placeholder="Message"></textarea>
+<section id="purpose-dropdown" style="padding-top: 0; padding-bottom: 50px;">
+    <div class="dropdown" id="missionDropdown">
+        <button class="mission-btn" onclick="toggleMission()">
+            Mission & Vision <span id="arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <p>My mission is to use technology and innovation to solve real-world problems. I am dedicated to applying my skills in coding, 
+            electronics, and problem-solving to create solutions that improve lives, empower others, and contribute positively to my 
+            community and the world beyond. I believe that technology has the power to bridge gaps, inspire change, and create a 
+            better future for everyone.</p>
             
+            <p>My vision is to leverage innovation and technology as powerful tools to drive positive change. By applying my skills in 
+            coding and electronics, I aim to create impactful solutions that address real-world challenges and benefit communities. 
+            As I continue to grow in both education and technology, my ultimate goal is to contribute to projects that make a meaningful 
+            and lasting difference in the lives of others.</p>
         </div>
-        <button class="send"><p>SEND</p></button>
-    </form>
+    </div>
+</section>
+<section id="skills">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+    <div id="all">
+        <div class="first">
+            <div class="skill-label">HTML <span>80%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+            </div>
+
+            <div class="skill-label">Python <span>70%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="70%"></div>
+            </div>
+
+            <div class="skill-label">JavaScript <span>40%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="40%"></div>
+            </div>
+        </div>
+
+        <div class="second">
+            <div class="skill-label">PHP <span>50%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="50%"></div>
+            </div>
+
+            <div class="skill-label">CSS <span>80%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="80%"></div>
+            </div>
+
+            <div class="skill-label">C++ <span>60%</span></div>
+            <div class="skill-bar-container">
+                <div class="skill-bar" data-width="60%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="tech-stack" style="padding-top: 0;">
+    <h3 style="text-align: center; color: var(--accent-orange); font-size: 0.9rem; margin-bottom: 30px; letter-spacing: 4px; font-weight: 800;">ENGINEERING TOOLS</h3>
+    
+    <div class="tech-container">
+        
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+            <span>VS Code</span>
+        </div>
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter: invert(1);">
+            <span>GitHub</span>
+        </div>
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino">
+            <span>Arduino</span>
+        </div>
+
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            <span>SQL DB</span>
+        </div>
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+            <span>Figma</span>
+        </div>
+
+    </div>
+</section>
+<section id="projects">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🔌 Network Engineering</h3>
+            <p>Designed and tested RJ45 Ethernet cables using T568B standards. Diagnosed signal transmission issues during Project Based Learning.</p>
+        </div>
+        <div class="card">
+            <h3>📊 ASYV Intranet</h3>
+            <p>Developed a comprehensive internal website for my school aimed at improving student communication and awareness.</p>
+        </div>
+        <div class="card">
+            <h3>💻 Database Logic</h3>
+            <p>Implemented advanced SQL queries including string manipulation and logical filtering for structured data analysis.</p>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
+
+<section id="activities">
+    <h2 class="section-title">Academic & Professional <span>Certificates</span></h2>
+    <div class="card-certificates">
+        
+        <div class="certificate" onclick="openLightbox('pictures/freeCode_page-0001.jpg')">
+            <h1>FreeCode Camp</h1>
+            <hr>
+            <div class="img">
+                <img src="pictures/freeCode_page-0001.jpg" alt="FreeCode Camp">
+            </div>
+        </div>
+
+        <div class="certificate" onclick="openLightbox('Chalon_page-0001.jpg')">
+            <h1>CMU CS Graphics</h1>
+            <hr>
+            <div class="img">
+                <img src="Chalon_page-0001.jpg" alt="CMU CS Graphics">
+            </div>
+        </div>
+
+        <div class="certificate" onclick="openLightbox('sololearn_page-0001.jpg')">
+            <h1>SoloLearn</h1>
+            <hr>
+            <div class="img">
+                <img src="sololearn_page-0001.jpg" alt="SoloLearn">
+            </div>
+        </div>
+
+        <div class="certificate" onclick="openLightbox('pictures/ASTRONOMY-copy-0_page-0001.jpg')">
+            <h1>IAAC Astronomy</h1>
+            <hr>
+            <div class="img">
+                <img src="pictures/ASTRONOMY-copy-0_page-0001.jpg" alt="IAAC">
+            </div>
+        </div>
+
+        <div class="certificate" onclick="openLightbox('pictures/wavumbuzi_page-0001.jpg')">
+            <h1>Wavumbuzi</h1>
+            <hr>
+            <div class="img">
+                <img src="pictures/wavumbuzi_page-0001.jpg" alt="Wavumbuzi">
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="services">
+    <h2 class="section-title">My <span>Services</span></h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-img">💻</div>
+            <div class="service-info">
+                <h3>UI/UX Design</h3>
+                <p>Creating intuitive digital interfaces.</p>
+                <div class="arrow">→</div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-img">🎧</div>
+            <div class="service-info">
+                <h3>Deejaying</h3>
+                <p>Professional audio mixing & entertainment.</p>
+                <div class="arrow">→</div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-img">⚙️</div>
+            <div class="service-info">
+                <h3>Web Development</h3>
+                <p>Building robust, responsive applications.</p>
+                <div class="arrow">→</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2 class="section-title">What <span>Mentors Say</span></h2>
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="client-meta">
+                <div class="client-img"></div>
+                <div class="client-info">
+                    <h4>Tr. Joseph .</h4>
+                    <span>STEM Mentor</span>
+                </div>
+            </div>
+            <p>"Chalon's analytical approach to physics problems is beyond his grade level. A true innovator."</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <div class="client-meta">
+                <div class="client-img"></div>
+                <div class="client-info">
+                    <h4>Students .</h4>
+                    <span>Project Lead</span>
+                </div>
+            </div>
+            <p>"Excellent leadership during the Intranet development project. Very detail-oriented."</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <div class="contact-container">
+        <form id="contactForm" action="https://formspree.io/f/xdaldgnq" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Inquiry</button>
+        </form>
+        <p id="confirmationMessage" style="color:var(--accent-orange); margin-top:20px; display:none; text-align:center; font-weight:600;">
+            ✅ Message sent successfully!
+        </p>
+    </div>
+</section>
+<section id="connect">
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+    <div class="social-grid">
+        
+        <a href="mailto:your-email@example.com" class="social-card">
+            <div class="social-icon">✉️</div>
+            <h3>Email</h3>
+            <span>uwasechalon1@gmail.com</span>
+        </a>
+
+        <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-card">
+            <div class="social-icon">🔗</div>
+            <h3>LinkedIn</h3>
+            <span>NIYOGISUBIZO UWASE Chalon</span>
+        </a>
+
+        <a href="https://instagram.com/your-handle" target="_blank" class="social-card">
+            <div class="social-icon">📸</div>
+            <h3>Instagram</h3>
+            <span>uwasechalon7</span>
+        </a>
+
+    </div>
 </section>
 <footer>
-    <div class="container">
-        <p>&copy; 2025 NIYOGISUBIZO UWASE Chalon. All rights reserved.</p>
-    </div>
+    © 2026 NIYOGISUBIZO UWASE Chalon | Built with Passion in Rwanda
 </footer>
-    <script>
-        const skillBars = document.querySelectorAll('.skill-bar');
-    
-        skillBars.forEach(skillBar => {
-          const width = skillBar.dataset.width;
-          skillBar.style.width = `${width}%`;
-          skillBar.textContent = `${width}%`; // Update text to show percentage
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const confirmation = document.getElementById('confirmationMessage');
+
+        fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                confirmation.style.display = 'block';
+                form.reset();
+            } else {
+                alert('There was a problem sending your message.');
+            }
+        }).catch(error => {
+            alert('There was a error.');
         });
+    });
+    function toggleMission() {
+    const dropdown = document.getElementById('missionDropdown');
+    const arrow = document.getElementById('arrow');
+    
+    dropdown.classList.toggle('active');
+    
+    // Rotate arrow icon
+    if(dropdown.classList.contains('active')) {
+        arrow.style.transform = "rotate(180deg)";
+    } else {
+        arrow.style.transform = "rotate(0deg)";
+    }
+}
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevents background scrolling
+}
 
-        let card1 = document.getElementById("card1")
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Re-enables scrolling
+}
 
-        card1.addEventListener("mouseover", event =>{
-            document.querySelector(".certificate").style.display = "block";
-        })
+// Close lightbox when pressing "Escape" key
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeLightbox();
+});
+// Function to animate skill bars on scroll
+const skillSection = document.querySelector('#skills');
+const progressBars = document.querySelectorAll('.skill-bar');
 
-        card1.addEventListener("mouseout", event =>{
-            document.querySelector(".certificate").style.display = "none";
-        })
-        let card2 = document.getElementById("card2")
+const showProgress = () => {
+    progressBars.forEach(progressBar => {
+        const value = progressBar.dataset.width;
+        progressBar.style.width = value;
+    });
+};
 
-        card2.addEventListener("mouseover", event =>{
-            document.querySelector(".cmu").style.display = "block";
-        })
+const hideProgress = () => {
+    progressBars.forEach(p => p.style.width = 0);
+};
 
-        card2.addEventListener("mouseout", event =>{
-            document.querySelector(".cmu").style.display = "none";
-        })
-        let card3 = document.getElementById("card3")
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            showProgress();
+        } else {
+            hideProgress(); // Resets if you scroll away (optional)
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% of the section is visible
 
-        card3.addEventListener("mouseover", event =>{
-            document.querySelector(".solo").style.display = "block";
-        })
+observer.observe(skillSection);
+</script>
 
-        card3.addEventListener("mouseout", event =>{
-            document.querySelector(".solo").style.display = "none";
-        })
-        let card4 = document.getElementById("card4")
-
-        card4.addEventListener("mouseover", event =>{
-            document.querySelector(".iaac").style.display = "block";
-        })
-
-        card4.addEventListener("mouseout", event =>{
-            document.querySelector(".iaac").style.display = "none";
-        })
-        let card5 = document.getElementById("card5")
-
-        card5.addEventListener("mouseover", event =>{
-            document.querySelector(".python1").style.display = "block";
-        })
-
-        card5.addEventListener("mouseout", event =>{
-            document.querySelector(".python1").style.display = "none";
-        })
-        let card6 = document.getElementById("card6")
-
-        card6.addEventListener("mouseover", event =>{
-            document.querySelector(".python2").style.display = "block";
-        })
-
-        card6.addEventListener("mouseout", event =>{
-            document.querySelector(".python2").style.display = "none";
-        })
-
-      </script>
 </body>
 </html>
